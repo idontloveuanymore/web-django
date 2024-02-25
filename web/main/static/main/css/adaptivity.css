@@ -1,0 +1,76 @@
+/* 320 - 768 */
+/* 768 - 992 */
+/* 992+ */
+
+@media (min-height: 320px) and (max-height: 500px) {
+    .sociality p {
+        margin: 10px;
+        font-size: 24pt;
+    }
+    .bottom-container {
+        margin-bottom: -40px;
+    }
+}
+
+@media (min-height: 500px) and (max-height: 700px) {
+    .sociality p {
+        margin: 15px;
+        font-size: 32pt;
+    }
+    .bottom-container {
+        margin-bottom: -40px;
+    }
+}
+
+
+@media (min-width: 320px) {
+    .track-info {
+        display: none;
+    }
+
+    html.light {
+        --slope: rotate(0deg);
+        --particles-width: 100%;
+    }
+
+    .sociality {
+        left: 50%;
+    }
+}
+
+@media (min-width: 768px) {
+
+    html.light {
+        --slope: rotate(-70deg);
+        --particles-width: 30%;
+    }
+
+    .track-cover {
+        display: none;
+    }
+
+    .track-info {
+        display: flex;
+    }
+
+    .sociality {
+        left: 50%;
+    }
+
+    .audio-playing-gif {
+        display: none;
+    }
+
+    .bottom-container {
+        right: 0px;
+    }
+}
+
+@media (min-width: 992px) {
+    .sociality {
+        left: 70%;
+    }
+
+    
+}
+

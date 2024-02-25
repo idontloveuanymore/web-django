@@ -1,0 +1,156 @@
+html.light {
+    --bg-color: #dcdcdc;
+    --text-color: black;
+    --telegram-logo: url('https://i.ibb.co/88zWbDV/telegram-logo-light.png');
+    --info-logo: url('https://i.ibb.co/prcRPmr/info-logo-light.png');
+}
+
+html.dark {
+    --bg-color: black;
+    --text-color: white;
+    --telegram-logo: url('https://i.ibb.co/KsKXRJp/telegram-logo-dark.png');
+    --info-logo: url('https://i.ibb.co/30MQYTV/info-logo-dark.png');
+}
+
+.small-image-tg {
+    margin-top: -15px;  
+    padding: 15px;
+    margin-right: 15px;
+    max-height: 30px;
+    max-width: 30px;
+    background-image: var(--telegram-logo);
+    background-size: cover;
+}
+
+.small-image-info {
+    margin-top: -15px;
+    padding: 15px;
+    max-height: 30px;
+    max-width: 30px;
+    background-image: var(--info-logo);
+    background-size: cover;
+}
+@font-face {
+    font-family: 'MontserratThin';
+    src: url('/static/main/fonts/Montserrat-Thin.ttf') format('truetype');
+    font-weight: 1px;
+    font-style: normal;
+}
+
+/* Music bar */
+.music-bar {
+    height: 70px;
+    position: fixed;
+    color: var(--text-color);
+    z-index: 1001;
+    width: 35%;
+    display: flex;
+    justify-content: flex-start;
+    font-family: 'MontserratThin', sans-serif;
+    align-items: center;
+}
+
+.track-info {
+    display: flex;
+    align-items: center;
+}
+
+.track-info img {
+    margin: 0;
+
+}
+
+.audio-playing-gif img {
+    padding-left: 10px;
+    padding-top: 15px;
+    width: 25px;
+    height: 25px;
+}
+
+.text-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.track-name {
+    margin: 0;
+    margin-left: 5px;
+}
+
+.track-author {
+    margin: 5px 0;
+    margin-left: 5px;
+}
+
+/* Header */
+.header-container {
+    position: fixed;
+    text-align: center;
+    top: 0;
+    width: 100%;
+    display: flex;
+    background-color: var(--bg-color);
+    justify-content: center;
+    padding: 10px;
+    z-index: 1000; /* Устанавливает z-index, чтобы header оставался выше других элементов */
+    /* border-bottom: 1px solid #ccc; */
+}
+
+.theme-switch-button {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+    z-index: 9999999999;
+}
+
+#switch {
+    width: 30px;
+    height: 30px;
+}
+
+/* Text */
+@font-face {
+    font-family: 'MontserratBlack';
+    src: url('/static/main/fonts/Montserrat-Regular.ttf') format('truetype');
+    font-weight: 1px;
+    font-style: normal;
+}
+
+.header-text {
+    color: var(--text-color);
+    text-align: center;
+    margin: 5px;
+    font-family: 'MontserratBlack', sans-serif;
+    font-weight: 400;
+}
+
+.online-status {
+    width: 7px;
+    height: 7px;
+    margin-top: 5px;
+    border-radius: 50%;
+    border: 2px solid var(--text-color);
+}
+
+.bottom-container {
+    background-color: var(--bg-color);
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    /* border-top: 1px solid #ccc; */
+}
+
+/* Text */
+@font-face {
+    font-family: 'MontserratBlack';
+    src: url('/static/main/fonts/Montserrat-Regular.ttf') format('truetype');
+}
+
+.bottom-text {
+    color: var(--text-color);
+    font-size: 32px;
+    font-family: 'MontserratBlack', sans-serif;
+    font-weight: 400;
+}

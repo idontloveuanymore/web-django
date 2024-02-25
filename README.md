@@ -1,0 +1,2 @@
+# web
+ fist django project

@@ -1,0 +1,137 @@
+html.light {
+    --bg-color: #dcdcdc;
+    --main-color: white;
+    --text-color: black;
+    --bg-img: url('https://i.pinimg.com/originals/df/eb/0a/dfeb0aa8361199982c050bf08924a9b2.jpg') center/cover;
+
+    --slope: rotate(-70deg);
+    --particles-width: 30%;
+}
+
+html.dark {
+    --bg-color: black;
+    --main-color: #0f0f0f;
+    --text-color: white;
+    --bg-img: url('https://i.pinimg.com/originals/05/60/2f/05602f4b3cf0f32d2bcddd9f827a3083.jpg') center/cover;
+    --slope: rotate(0deg);
+    --particles-width: 100%;
+}
+
+/* Background */
+
+body {
+    background-color: var(--main-color);
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    overflow: hidden;
+    position: relative;
+}
+
+.background {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background: var(--bg-img);
+    will-change: transform;
+}
+
+.particles-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: var(--particles-width);
+    height: 100%;
+    pointer-events: none;
+    transform: var(--slope)
+}
+
+.particle {
+    position: absolute;
+    background-color: var(--text-color);
+    border-radius: 50%;
+    animation-timing-function: linear;
+}
+
+@keyframes fall {
+    to {
+        transform: translateX(100vw) translateY(100vh);
+        opacity: 0;
+    }
+}
+
+/* Main */
+
+@font-face {
+    font-family: 'MontserratBlack';
+    src: url('/static/main/fonts/Montserrat-Regular.ttf') format('truetype');
+    font-weight: 1px;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'MontserratExtraLight';
+    src: url('/static/main/fonts/Montserrat-ExtraLight.ttf') format('truetype'); 
+    font-style: normal;
+}
+
+.sociality {
+    font-family: 'MontserratExtraLight';
+    width: 350px;
+    display: flex;
+    color: var(--text-color);
+    flex-direction: column;
+    text-align: center;
+    z-index: 900000;
+
+    position: absolute;
+    left: 70%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.sociality p {
+    margin: 15px;
+    font-size: 52pt;
+}
+
+/* Running line */
+
+.running-line {
+    font-family: 'MontserratBlack';
+    position: fixed;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    height: 100vh;
+    width: 50px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    writing-mode: vertical-lr;
+    color: var(--text-color);
+    font-size: 21px;
+}
+
+.running-line span {
+    margin: 10px 0;
+    animation: runningLine 7s linear infinite;
+    white-space: nowrap;
+}
+
+@keyframes runningLine {
+    0% {
+        opacity: 0;
+        transform: translateY(-100%);
+    }
+    50% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(100%);
+    }
+}

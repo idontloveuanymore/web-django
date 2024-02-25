@@ -1,0 +1,34 @@
+{% extends 'main/layout.html' %}
+    {% load static %}
+
+{% block title %} fade.awway {% endblock %}
+
+{% block css_files %}
+<link rel="stylesheet" href="{% static 'main/css/main.css' %}">
+<link rel="stylesheet" href="{% static 'main/css/adaptivity.css' %}">
+{% endblock %}
+
+{% block content %}
+
+<body>
+    <div class="running-line" oncopy="return false;" style="-webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;">
+        <span class="text1">Bastards!</span>
+        <span class="text2">Jesus, they killed Kenny!</span>
+    </div>
+
+    <div class="sociality">
+        <p id="YouTube_link"> YouTube </p>
+        <p id="YT-Music_link"> YT Music </p>
+        <p id="Telegram_link"> Telegram </p>
+        <p id="GitHub_link"> GitHub </p>
+    </div>
+
+    <div class="particles-container" id="particles-container"></div>
+    <div class="background"></div>
+    
+    <script src="{% static 'main/js/particles.js' %}"></script>
+    <script src="{% static 'main/js/background-movement.js' %}"></script>
+
+</body>
+
+{% endblock %}

@@ -1,0 +1,63 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en" class="dark"> 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="icon" type="image/x-icon" href="{% static 'main/img/icon.png' %}">
+    <link rel="stylesheet" href="{% static 'main/css/layout.css' %}">
+    <link rel="stylesheet" href="{% static 'main/css/adaptivity.css' %}">
+
+    {% block css_files %}{% endblock %}
+
+    <script src="{% static 'main/js/theme-switch.js' %}" defer></script>
+</head>
+<body>
+<head>
+    <div class="music-bar">
+        <img id="track-cover" src="" alt="">
+        <div class="track-info">
+            <div class="text-info">
+                <h2 id="track-name" class="track-name"></h2>
+                <p id="track-author" class="track-author"></p>
+            </div>
+            <div class="audio-playing-gif" id="audioGif">
+                <img src="https://i.pinimg.com/564x/ed/14/3e/ed143e8046ba873536b846502bb40ab2.jpg"/>
+            </div>
+        </div>
+    </div>
+
+    <div class="header-container">
+        <h1 id="fade-away" class="header-text">fade.awway</h1>
+        <div class="online-status"></div>
+    </div>
+
+    <div class="theme-switch-button" onclick="toggleTheme()">
+        <img id="switch" src="{% static 'main/img/moon.png' %}" alt="Toggle Theme">
+        <script>
+            window.lightThemeImage = "{% static 'main/img/sun.png' %}";
+            window.darkThemeImage = "{% static 'main/img/moon.png' %}";
+        </script>
+    </div>
+
+</head>
+<main>
+    {% block content %}
+    {% endblock %}
+</main>
+
+<footer>
+    <div class="bottom-container">
+        <h1 class="bottom-text">I don't love you anymore</h1>
+        <a href="http://t.me/i_dont_love_u_anymore"><img class="small-image-tg"></a>
+        <a href="https://github.com/qwexzcssad"><img class="small-image-info"></a>
+    </div>
+</footer>
+
+<script src="{% static 'main/js/text-coloration.js' %}"></script>
+<script src="{% static 'main/js/get-api-data.js' %}"></script>
+
+</body>
+</html>
